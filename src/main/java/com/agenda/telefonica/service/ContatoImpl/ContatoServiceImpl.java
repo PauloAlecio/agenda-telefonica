@@ -4,12 +4,13 @@ import com.agenda.telefonica.model.Contato;
 import com.agenda.telefonica.service.ContatoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.ContatoRepository;
+import com.agenda.telefonica.repository.ContatoRepository;
 
 @Service
 public class ContatoServiceImpl implements ContatoService
 {
-    private ContatoRepository repository;
+
+    private final ContatoRepository repository;
 
     @Autowired
     public ContatoServiceImpl ( ContatoRepository repository ) {
