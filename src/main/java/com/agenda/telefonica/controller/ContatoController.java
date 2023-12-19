@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.List;
-
 @Controller
 public class ContatoController
 {
@@ -33,7 +31,7 @@ public class ContatoController
     public String submmit(@ModelAttribute Contato contato, Model model ){
         model.addAttribute("contato",contato);
         service.add(contato);
-        return "result";
+        return "detalhe";
      }
 
      @GetMapping("/contatos")
