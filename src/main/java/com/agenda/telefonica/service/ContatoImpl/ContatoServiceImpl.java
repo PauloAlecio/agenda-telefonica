@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.agenda.telefonica.repository.ContatoRepository;
 
+import java.util.List;
+
 @Service
 public class ContatoServiceImpl implements ContatoService
 {
@@ -20,5 +22,10 @@ public class ContatoServiceImpl implements ContatoService
     @Override
     public void add ( Contato model ) {
         repository.save(model);
+    }
+
+    @Override
+    public List<Contato> getContatos () {
+        return repository.findAll();
     }
 }
