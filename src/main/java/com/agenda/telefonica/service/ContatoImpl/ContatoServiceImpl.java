@@ -28,4 +28,9 @@ public class ContatoServiceImpl implements ContatoService
     public List<Contato> getContatos () {
         return repository.findAll();
     }
+
+    @Override
+    public Contato getById ( Long id ) {
+        return repository.findById(id).get();
+    }
 }

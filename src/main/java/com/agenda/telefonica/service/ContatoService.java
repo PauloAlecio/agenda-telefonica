@@ -8,4 +8,6 @@ public interface ContatoService
 {
     void add ( Contato model );
     List<Contato> getContatos();
+
+    Contato getById ( Long id );
 }
